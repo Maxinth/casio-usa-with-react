@@ -1,0 +1,43 @@
+.hoverDetail {
+  width: 300px;
+  font-family: "Lato", sans-serif;
+}
+
+.hoverDetail__nav {
+  list-style-type: none;
+  background-color: rgb(0, 50, 150);
+  padding: 0.3rem 2rem;
+}
+
+.hoverDetail__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #eaf2ff;
+  padding: 0.5rem 1rem 0.5rem;
+  font-weight: normal;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.hoverDetail__title > svg {
+  color: rgb(143, 143, 143);
+}
+.hoverDetail__navLinks {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.3rem 0;
+  display: block;
+  width: 100%;
+  /* transition: all 1s; */
+}
+
+.hoverDetail__navLinks:hover {
+  font-weight: bolder;
+}
+
+/* .hoverDetail:last-child + section.smart {
+  background-color: hsl(174, 72%, 91%);
+  padding: 1rem 2rem;
+  color: #fff;
+} */

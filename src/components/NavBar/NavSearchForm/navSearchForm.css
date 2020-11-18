@@ -1,0 +1,36 @@
+.navSearchForm {
+  background-color: #fff;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  /* padding-left: 0.4rem; */
+  padding: 0.2rem 0.2rem;
+  border: 1px solid rgb(218, 212, 212);
+  border-radius: 5px;
+  width: 350px;
+  flex: 1;
+  margin: 0.8rem 0;
+}
+
+.navSearchForm > svg {
+  color: grey;
+}
+.navSearchForm > form {
+  display: flex;
+  align-items: center;
+  align-items: center;
+  flex: 1;
+}
+
+.navSearchForm input {
+  padding: 0.4rem 0.8rem 0.4rem 0.2rem;
+  border: none;
+  flex: 1;
+  font-size: 1rem;
+  text-align: center;
+  /* padding */
+}
+
+.navSearchForm__searchIcon {
+  color: rgb(0, 50, 150);
+}

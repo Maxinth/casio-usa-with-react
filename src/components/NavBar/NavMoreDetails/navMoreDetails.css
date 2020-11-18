@@ -1,0 +1,82 @@
+.navMoreDetails {
+  background-color: rgb(234, 242, 255);
+  width: 200px;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+.navMoreDetails > * {
+  padding: 0.5rem 0.8rem;
+}
+
+.navMoreDetails__corporate > a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navMoreDetails__corporate svg {
+  color: rgb(143, 143, 143);
+  font-size: 0.9rem;
+  padding: 0.1rem;
+}
+
+.navMoreDetails__productRegistration {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  .navMoreDetails {
+    left: 455px;
+    display: block;
+  }
+}
+@media (min-width: 771px) {
+  .navMoreDetails {
+    left: calc(100vw - 315px - 0.1%);
+  }
+}
+@media (min-width: 788px) {
+  .navMoreDetails {
+    left: calc(100vw - 315px - 0.2%);
+  }
+}
+@media (min-width: 790px) {
+  .navMoreDetails {
+    left: calc(100vw - 315px - 0.5%);
+  }
+}
+@media (min-width: 806px) {
+  .navMoreDetails {
+    left: calc(100vw - 315px - 0.8%);
+  }
+}
+@media (min-width: 832px) {
+  .navMoreDetails {
+    left: calc(100vw - 315px - 1.8%);
+  }
+}
+@media (min-width: 861px) {
+  .navMoreDetails {
+    left: calc(100vw - 300px - 0.2%);
+  }
+}
+@media (min-width: 893px) {
+  .navMoreDetails {
+    left: calc(100vw - 306px - 0.2%);
+  }
+}
+
+@media (min-width: 901px) {
+  .navMoreDetails {
+    left: 590px;
+  }
+}
+@media (min-width: 902px) {
+  .navMoreDetails {
+    display: none;
+  }
+}
