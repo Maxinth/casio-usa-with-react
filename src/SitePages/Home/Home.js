@@ -1,17 +1,14 @@
 import React, { useState, createContext } from "react";
 import NavBar from "../../components/NavBar/NavBar";
+import Products from "../../components/Products/Products";
 import SlideShow from "../../components/SlideShow/SlideShow";
-
+import "./Home.css";
 export const NavContext = createContext();
 
 const Home = () => {
   // state for mobile bar
   const [bar, setBar] = useState(false);
-  const toggleBar = () =>
-    setBar((bar) => {
-      console.log("hamburger clicked");
-      return !bar;
-    });
+  const toggleBar = () => setBar((bar) => !bar);
 
   const closeBar = () => setBar(false);
 
@@ -58,6 +55,7 @@ const Home = () => {
         <NavBar />
         <SlideShow />
       </NavContext.Provider>
+      <Products />
     </section>
   );
 };

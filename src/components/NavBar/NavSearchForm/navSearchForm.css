@@ -6,6 +6,8 @@
   /* padding-left: 0.4rem; */
   padding: 0.2rem 0.2rem;
   border: 1px solid rgb(218, 212, 212);
+
+  /* border: 1px solid rgb(0, 50, 150); */
   border-radius: 5px;
   width: 350px;
   flex: 1;
@@ -13,7 +15,7 @@
 }
 
 .navSearchForm > svg {
-  color: grey;
+  color: rgb(0, 50, 150);
 }
 .navSearchForm > form {
   display: flex;
@@ -32,5 +34,6 @@
 }
 
 .navSearchForm__searchIcon {
-  color: rgb(0, 50, 150);
+  color: grey;
+  /* color: rgb(0, 50, 150); */
 }

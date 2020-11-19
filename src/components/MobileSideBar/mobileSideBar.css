@@ -106,13 +106,13 @@ svg.arrow {
 }
 
 .mobileSideBar__closeIcon {
-  background-color: #fff;
+  color: #fff;
   font-size: 2rem !important;
   font-weight: bolder;
   margin-left: 17.9rem;
-  color: red;
-  border-radius: 50px;
-  margin-top: 0.2rem;
+  background-color: rgb(0, 50, 150);
+  border-radius: 7px;
+  margin-top: 0.8rem;
 }
 
 .mobileSideBar__moreDetails > .navSupportDetails {
