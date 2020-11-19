@@ -20,97 +20,99 @@ const NavBar = () => {
   return (
     <>
       <nav className="nav">
-        <header className={`nav__header ${classOnSearchToggle}`}>
-          <div className="nav__logo">
-            <img
-              src="https://casiocdn.com/casio-v2/resource/assets/logos/casio-logo.svg"
-              alt="casio logo"
-            />
-            <em> USA</em>
-          </div>
+        <div className="section container">
+          <header className={`nav__header ${classOnSearchToggle}`}>
+            <div className="nav__logo">
+              <img
+                src="https://casiocdn.com/casio-v2/resource/assets/logos/casio-logo.svg"
+                alt="casio logo"
+              />
+              <em> USA</em>
+            </div>
 
-          {/* <section className="nav__right"> */}
-          <MenuRoundedIcon className="nav__hamburger" onClick={toggleBar} />
-          <section className="nav__menuRight">
-            {!toggleSearchBox ? (
-              <ul className="nav__menu">
-                <li>
-                  <Link
-                    to="/products"
-                    className="nav__navLinks"
-                    id="product"
+            {/* <section className="nav__right"> */}
+            <MenuRoundedIcon className="nav__hamburger" onClick={toggleBar} />
+            <section className="nav__menuRight">
+              {!toggleSearchBox ? (
+                <ul className="nav__menu">
+                  <li>
+                    <Link
+                      to="/products"
+                      className="nav__navLinks"
+                      id="product"
+                      onMouseEnter={whenHovered}
+                      // onMouseLeave={whenNotInView}
+                    >
+                      Products
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/support"
+                      className="nav__navLinks"
+                      id="support"
+                      onMouseEnter={whenHovered}
+                      // onMouseLeave={whenNotInView}
+                    >
+                      Support
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/"
+                      className="nav__navLinks"
+                      onMouseEnter={whenNotInView} // cleanup
+                    >
+                      News
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/product-registration"
+                      className="nav__navLinks product"
+                      onMouseEnter={whenNotInView} // cleanup
+                    >
+                      Product Registration
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/corporate"
+                      className="nav__navLinks final"
+                      onMouseEnter={whenNotInView} // cleanup
+                    >
+                      Corporate
+                    </Link>
+                  </li>
+                </ul>
+              ) : (
+                <NavSearchForm showInitialNav={onToggle} />
+              )}
+
+              {!toggleSearchBox && (
+                <div className="nav__moreAndSearch">
+                  <span
+                    className="nav__more"
+                    id="more"
                     onMouseEnter={whenHovered}
                     // onMouseLeave={whenNotInView}
                   >
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/support"
-                    className="nav__navLinks"
-                    id="support"
+                    More
+                  </span>
+
+                  <SearchRoundedIcon
+                    id="search"
                     onMouseEnter={whenHovered}
+                    onClick={onToggle}
                     // onMouseLeave={whenNotInView}
-                  >
-                    Support
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/"
-                    className="nav__navLinks"
-                    onMouseEnter={whenNotInView} // cleanup
-                  >
-                    News
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/product-registration"
-                    className="nav__navLinks product"
-                    onMouseEnter={whenNotInView} // cleanup
-                  >
-                    Product Registration
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/corporate"
-                    className="nav__navLinks final"
-                    onMouseEnter={whenNotInView} // cleanup
-                  >
-                    Corporate
-                  </Link>
-                </li>
-              </ul>
-            ) : (
-              <NavSearchForm showInitialNav={onToggle} />
-            )}
+                  />
+                </div>
+              )}
+            </section>
 
-            {!toggleSearchBox && (
-              <div className="nav__moreAndSearch">
-                <span
-                  className="nav__more"
-                  id="more"
-                  onMouseEnter={whenHovered}
-                  // onMouseLeave={whenNotInView}
-                >
-                  More
-                </span>
-
-                <SearchRoundedIcon
-                  id="search"
-                  onMouseEnter={whenHovered}
-                  onClick={onToggle}
-                  // onMouseLeave={whenNotInView}
-                />
-              </div>
-            )}
-          </section>
-
-          {/* </section> */}
-        </header>
+            {/* </section> */}
+          </header>
+        </div>
       </nav>
       {bar && <MobileSideBar />}
     </>

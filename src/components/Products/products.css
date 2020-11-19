@@ -70,6 +70,7 @@
 .products__listItem:hover .products__img {
   opacity: 0.8;
 }
+
 @media (min-width: 768px) {
   /* show the box irrespective of the current state of the product toggleIcon */
   .products__moreDetails.isVisible,
@@ -124,5 +125,35 @@
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 414px) {
+  .products__linkTitle.smart {
+    margin-left: 2rem;
+  }
+}
+
+@media (max-width: 411px) {
+  .products__linkTitle.smart {
+    margin-left: 1.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .products__linkTitle.smart {
+    margin-left: 3.3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .products__linkTitle.smart {
+    margin-left: 3.2rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .products__linkTitle.smart {
+    margin-left: 3.1rem;
   }
 }

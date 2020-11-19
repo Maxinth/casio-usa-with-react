@@ -1,5 +1,6 @@
 import React, { useState, createContext } from "react";
 import NavBar from "../../components/NavBar/NavBar";
+import NewsReleases from "../../components/News/NewsReleases";
 import Products from "../../components/Products/Products";
 import SlideShow from "../../components/SlideShow/SlideShow";
 import "./Home.css";
@@ -56,6 +57,7 @@ const Home = () => {
         <SlideShow />
       </NavContext.Provider>
       <Products />
+      <NewsReleases />
     </section>
   );
 };

@@ -12,28 +12,30 @@ const Products = () => {
   const classOnToggle = toggleProducts ? "isVisible" : "isHidden";
   return (
     <section className="products">
-      <h3 className="products__title">
-        Products
-        {!toggleProducts ? (
-          <AddRoundedIcon
-            className="products__toggleIcon"
-            onClick={toggleOnClick}
-          />
-        ) : (
-          <RemoveRoundedIcon
-            className="products__toggleIcon"
-            onClick={toggleOnClick}
-          />
-        )}
-      </h3>
+      <section className="container">
+        <h3 className="products__title">
+          Products
+          {!toggleProducts ? (
+            <AddRoundedIcon
+              className="products__toggleIcon"
+              onClick={toggleOnClick}
+            />
+          ) : (
+            <RemoveRoundedIcon
+              className="products__toggleIcon"
+              onClick={toggleOnClick}
+            />
+          )}
+        </h3>
 
-      <div className={`products__moreDetails ${classOnToggle}`}>
-        <ul className="products__list">
-          {data.map((dataItem) => (
-            <ProductItem key={dataItem.title} {...dataItem} />
-          ))}
-        </ul>
-      </div>
+        <div className={`products__moreDetails ${classOnToggle}`}>
+          <ul className="products__list">
+            {data.map((dataItem) => (
+              <ProductItem key={dataItem.title} {...dataItem} />
+            ))}
+          </ul>
+        </div>
+      </section>
     </section>
   );
 };
