@@ -13,7 +13,9 @@
   flex-wrap: wrap;
   background-color: #fff;
 }
-
+.nav__headerLink {
+  text-decoration: none;
+}
 .nav__header.logoAndSearch {
   justify-content: space-between;
 }

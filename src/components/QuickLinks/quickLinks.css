@@ -1,0 +1,50 @@
+.quickLinks {
+  font-family: "Lato", sans-serif;
+  display: none;
+}
+
+.quickList {
+  color: #444;
+  padding: 1rem;
+}
+
+.quickList__title {
+  margin-bottom: 0.6rem;
+  text-decoration: none;
+  color: #444;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  padding-bottom: 0.8rem;
+}
+
+.quickList__title:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--casio-blue);
+  text-decoration-thickness: 0.1rem;
+}
+.quickList__nav {
+  list-style-type: none;
+}
+
+.quickList__link {
+  color: #444;
+  text-decoration: none;
+}
+
+.quickList__nav {
+  line-height: 1.5;
+}
+.quickList__link {
+  font-size: 0.9rem;
+  color: rgb(148, 146, 146);
+}
+
+@media (min-width: 768px) {
+  .quickLinks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem 2rem;
+  }
+}

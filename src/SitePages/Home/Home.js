@@ -2,6 +2,8 @@ import React, { useState, createContext } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import NewsReleases from "../../components/News/NewsReleases";
 import Products from "../../components/Products/Products";
+import QuickLinks from "../../components/QuickLinks/QuickLinks";
+import RelatedLinks from "../../components/RelatedLinks/RelatedLinks";
 import SlideShow from "../../components/SlideShow/SlideShow";
 import "./Home.css";
 export const NavContext = createContext();
@@ -58,6 +60,8 @@ const Home = () => {
       </NavContext.Provider>
       <Products />
       <NewsReleases />
+      <RelatedLinks />
+      <QuickLinks />
     </section>
   );
 };

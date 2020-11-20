@@ -70,6 +70,10 @@
   color: #333;
 }
 
+.newsRelease__listItem:hover .newsRelease__timePiece {
+  opacity: 0.5;
+}
+
 @media (min-width: 768px) {
   .newsRelease {
     padding: unset;
@@ -80,5 +84,13 @@
     padding: 0.2rem 2rem;
     /* max-width: 1200px;
     margin: 0 auto; */
+  }
+
+  .newsRelease__newsTitle {
+    font-size: 1.6rem;
+  }
+
+  .newsRelease__header {
+    margin-top: 4rem;
   }
 }

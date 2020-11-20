@@ -22,13 +22,15 @@ const NavBar = () => {
       <nav className="nav">
         <div className="section container">
           <header className={`nav__header ${classOnSearchToggle}`}>
-            <div className="nav__logo">
-              <img
-                src="https://casiocdn.com/casio-v2/resource/assets/logos/casio-logo.svg"
-                alt="casio logo"
-              />
-              <em> USA</em>
-            </div>
+            <Link to="/" className="nav__headerLink">
+              <div className="nav__logo">
+                <img
+                  src="https://casiocdn.com/casio-v2/resource/assets/logos/casio-logo.svg"
+                  alt="casio logo"
+                />
+                <em> USA</em>
+              </div>
+            </Link>
 
             {/* <section className="nav__right"> */}
             <MenuRoundedIcon className="nav__hamburger" onClick={toggleBar} />

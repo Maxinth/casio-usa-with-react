@@ -1,0 +1,71 @@
+.quickForm {
+  font-family: "Lato", sans-serif;
+}
+.quickForm__searchBox {
+  background-color: #fff;
+  margin-top: 0.9rem;
+  flex-wrap: nowrap;
+
+  padding-left: 0.4rem;
+  border: 1px solid rgb(218, 212, 212);
+  border-radius: 5px;
+  min-width: 200px;
+  /* border-bottom: 1px solid black; */
+  /* margin-bottom: 1rem; */
+}
+
+.quickForm__searchBox > form {
+  display: flex;
+  align-items: center;
+}
+
+.quickForm__searchBox > form svg {
+  margin-right: 0.5rem;
+}
+.quickForm__searchBox input {
+  border: none;
+  font-size: 1rem;
+  width: 190px;
+  padding: 0.5rem 0;
+  flex: 1;
+  /* margin-right: 3rem; */
+}
+
+.quickForm__socialMedia {
+  display: flex;
+  margin-top: 1.1rem;
+  align-items: center;
+}
+
+.quickForm__socialIcons {
+  /* flex: 1; */
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quickForm__socialIcons > svg {
+  font-size: 1.3rem;
+  margin-left: 0.2rem;
+}
+.quickForm__text {
+  flex: 1;
+  color: rgb(68, 68, 68);
+}
+
+.quickForm__fb {
+  color: blue;
+}
+
+.quickForm__tw {
+  color: rgb(114, 198, 247);
+}
+
+.quickForm__yt {
+  color: red;
+}
+
+.quickForm__searchIcon {
+  color: var(--casio-blue);
+}
