@@ -55,6 +55,7 @@
   font-weight: bolder;
   color: #333;
   margin-left: 0.9rem;
+  /* margin-left: auto; */
   font-family: "Lato", sans-serif;
   font-size: 18px;
   min-width: 90px;
@@ -81,6 +82,10 @@
   .products {
     padding: 0.2rem 2rem;
     background-color: #fff;
+  }
+
+  .products__img {
+    flex: 1;
   }
   .products__title {
     color: #333;
@@ -112,12 +117,12 @@
   }
 
   .products__linkTitle {
-    /* margin-left: unset; */
+    margin-left: unset;
     font-size: 0.75rem;
     font-weight: 400;
     min-width: 90px;
-    /* margin-right: 0.3rem; */
-    margin-left: unset;
+    /* margin-right: 1rem; */
+
     flex: 1;
   }
 
@@ -155,5 +160,11 @@
 @media (max-width: 320px) {
   .products__linkTitle.smart {
     margin-left: 3.1rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .products__linkTitle {
+    margin-right: 1rem;
   }
 }

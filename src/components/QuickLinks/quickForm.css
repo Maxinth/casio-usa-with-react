@@ -31,6 +31,9 @@
   /* margin-right: 3rem; */
 }
 
+.quickForm__searchBox input:focus {
+  outline: none;
+}
 .quickForm__socialMedia {
   display: flex;
   margin-top: 1.1rem;

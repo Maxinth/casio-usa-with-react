@@ -1,4 +1,5 @@
 import React, { useState, createContext } from "react";
+import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import NewsReleases from "../../components/News/NewsReleases";
 import Products from "../../components/Products/Products";
@@ -62,6 +63,7 @@ const Home = () => {
       <NewsReleases />
       <RelatedLinks />
       <QuickLinks />
+      <Footer />
     </section>
   );
 };
