@@ -5,7 +5,7 @@ import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounde
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import NavProductDetails from "../NavBar/NavProductDetails/NavProductDetails";
 import "./mobileSideBar.css";
-import { NavContext } from "../../SitePages/Home/Home";
+import { NavContext } from "../../App";
 import CloseIcon from "@material-ui/icons/Close";
 import { motion } from "framer-motion";
 import {

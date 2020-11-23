@@ -16,9 +16,9 @@
 .nav__headerLink {
   text-decoration: none;
 }
-.nav__header.logoAndSearch {
+/* .nav__header.logoAndSearch {
   justify-content: space-between;
-}
+} */
 
 .nav__header span {
   display: inline-block;
@@ -130,7 +130,7 @@
   }
 
   .nav__header {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
   }

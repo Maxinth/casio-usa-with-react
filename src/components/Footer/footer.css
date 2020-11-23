@@ -1,5 +1,5 @@
 .footer__leftDetails > p,
-.footer__leftDetails > img {
+.footer__leftDetails img {
   display: none;
 }
 
@@ -62,7 +62,7 @@
   }
 
   .footer__leftDetails > p,
-  .footer__leftDetails > img {
+  .footer__leftDetails img {
     display: block;
   }
 

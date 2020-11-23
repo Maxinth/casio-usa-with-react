@@ -7,10 +7,13 @@ const Footer = () => {
     <footer className="footer ">
       <section className="container">
         <section className="footer__leftDetails">
-          <img
-            src="https://casiocdn.com/casio-v2/resource/assets/logos/casio-logo.svg"
-            alt="casio logo"
-          />
+          <Link to="/">
+            <img
+              className="footer__logo"
+              src="https://casiocdn.com/casio-v2/resource/assets/logos/casio-logo.svg"
+              alt="casio logo"
+            />
+          </Link>
           <p>&copy; 2020 CASIO AMERICA, INC</p>
           <ul className="footer__nav">
             <li className="footer__listItem">

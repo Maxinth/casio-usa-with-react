@@ -33,6 +33,10 @@
   text-decoration: none;
 }
 
+.quickList__link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--casio-blue);
+}
 .quickList__nav {
   line-height: 1.5;
 }
@@ -43,6 +47,11 @@
 
 @media (min-width: 768px) {
   .quickLinks {
+    display: block;
+    background-color: var(--container-bg);
+  }
+  .quickLinks .container {
+    background-color: var(--container-bg);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 1rem 2rem;

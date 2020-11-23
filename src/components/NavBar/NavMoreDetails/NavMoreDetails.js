@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
 import "./navMoreDetails.css";
 import { Link } from "react-router-dom";
-import { NavContext } from "../../../SitePages/Home/Home";
+import { NavContext } from "../../../App";
 const NavMoreDetails = () => {
   const { whenNotInView } = useContext(NavContext);
   return (

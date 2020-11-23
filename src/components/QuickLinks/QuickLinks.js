@@ -7,13 +7,13 @@ import QuickForm from "./QuickForm";
 const QuickLinks = () => {
   const { news, products, support } = data;
   return (
-    <section className="quickLinks container">
-      {/* <section className="container"> */}
-      <QuickList {...products} />
-      <QuickList {...support} />
-      <QuickList {...news} />
-      <QuickForm />
-      {/* </section> */}
+    <section className="quickLinks ">
+      <section className="container">
+        <QuickList {...products} />
+        <QuickList {...support} />
+        <QuickList {...news} />
+        <QuickForm />
+      </section>
     </section>
   );
 };

@@ -1,0 +1,45 @@
+.newProductHeader {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.newProductHeader__imgContainer {
+  max-width: 190px;
+  min-width: 5px;
+  margin: 0 0.8rem;
+}
+.newProductHeader__img {
+  object-fit: contain;
+  display: inline-block;
+  width: 100%;
+}
+
+.newProductHeader__itemType {
+  color: var(--casio-blue);
+  margin-left: 0.5rem;
+}
+.newProductHeader__title {
+  color: rgb(16, 13, 13);
+
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .newProductHeader {
+    margin: 2rem 0;
+    justify-content: center;
+  }
+
+  .newProductHeader__title {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+
+  .newProductHeader__img {
+    max-width: 40px;
+  }
+}

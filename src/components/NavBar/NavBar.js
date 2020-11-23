@@ -3,7 +3,8 @@ import "./navbar.css";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import { Link } from "react-router-dom";
-import { NavContext } from "../../SitePages/Home/Home";
+
+import { NavContext } from "../../App";
 import MobileSideBar from "../MobileSideBar/MobileSideBar";
 import NavSearchForm from "./NavSearchForm/NavSearchForm";
 
@@ -14,14 +15,11 @@ const NavBar = () => {
 
   const onToggle = () => setToggleSearchBox(!toggleSearchBox);
 
-  const classOnSearchToggle = toggleSearchBox
-    ? "logoAndSearch"
-    : "logoAndNavLinks";
   return (
     <>
       <nav className="nav">
         <div className="section container">
-          <header className={`nav__header ${classOnSearchToggle}`}>
+          <header className="nav__header ">
             <Link to="/" className="nav__headerLink">
               <div className="nav__logo">
                 <img

@@ -1,0 +1,74 @@
+.productWatches,
+.productWatch,
+.productWatch__container {
+  background-color: var(--container-bg);
+}
+
+.productWatches__all {
+  padding: 1rem 2rem;
+}
+.productWatch {
+  padding: 1rem;
+}
+
+.productWatch:hover .productWatch__img {
+  opacity: 0.8;
+}
+.productWatch__brand {
+  background-color: #fff;
+}
+
+.productWatch__container {
+  display: flex;
+  flex-direction: column;
+  /* padding: 1rem; */
+  background-color: #fff;
+}
+
+.productWatch__img {
+  object-fit: contain;
+  width: 100%;
+  flex: 1;
+}
+
+.productWatch__brandContainer {
+  background-color: fff;
+  /* background-color: black; */
+  margin: 1rem 2rem;
+
+  /* padding-bottom: 0.6rem; */
+}
+.productWatch__brand {
+  max-width: 80px;
+  margin-top: 0.5rem;
+  width: 100%;
+  object-fit: contain;
+  background-color: #fff;
+}
+
+.productWatches__all {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .productWatches__all {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(6, 350px); */
+    grid-gap: 10px;
+  }
+
+  .productWatch {
+    grid-column: span 2;
+    /* max-height: 300px; */
+    padding: 0;
+  }
+
+  .productWatch:nth-child(1) {
+    grid-column: 1/4;
+  }
+
+  .productWatch:nth-child(2) {
+    grid-column: 4/-1;
+  }
+}

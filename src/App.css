@@ -6,10 +6,15 @@
 
 :root {
   --casio-blue: rgb(0, 50, 150);
+  --container-bg: rgb(245, 245, 245);
 }
 
 .container {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+
+.sitePage__content {
+  background-color: var(--container-bg);
 }

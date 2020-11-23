@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import HoverDetail from "../HoverDetail";
 import "./navProductDetails.css";
-import { NavContext } from "../../../SitePages/Home/Home";
+import { NavContext } from "../../../App";
 const NavProductDetails = () => {
   const { whenNotInView } = useContext(NavContext);
   return (
