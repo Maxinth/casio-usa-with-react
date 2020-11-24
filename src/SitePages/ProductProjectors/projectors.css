@@ -1,0 +1,15 @@
+.productProjectors__body {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .productProjectors__body > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 0 0.5rem; */
+  }
+
+  .productProjectors__body .itemCard:nth-child(7) {
+    grid-column: 1/-1;
+  }
+}

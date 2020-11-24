@@ -25,9 +25,9 @@ export default [
   },
   {
     img: "../../../productsImages/panel_register.png",
-    title: "cash register",
+    title: "cash registers",
 
-    goTo: "/cash-register",
+    goTo: "/cash-registers",
   },
   {
     img: "../../../productsImages/panel_projector.png",

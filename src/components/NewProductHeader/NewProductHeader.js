@@ -8,8 +8,10 @@ const NewProductHeader = ({ itemType }) => {
         <img src={newImg} alt="new" className="newProductHeader__img" />
       </div>
       <h4 className="newProductHeader__title">
-        New Products
-        <span className="newProductHeader__itemType">({itemType})</span>
+        <span>New Products</span>
+        {itemType && (
+          <span className="newProductHeader__itemType">({itemType})</span>
+        )}
       </h4>
     </section>
   );

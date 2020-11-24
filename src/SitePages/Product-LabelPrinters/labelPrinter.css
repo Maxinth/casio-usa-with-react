@@ -1,0 +1,16 @@
+.productLabelPrinters__body > .container {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .productLabelPrinters__body > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .productLabelPrinters__body .itemCard {
+    /* padding */
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+}

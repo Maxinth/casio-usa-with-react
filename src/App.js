@@ -4,10 +4,14 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./SitePages/Home/Home";
 import ProductWatches from "./SitePages/Product-Watches/ProductWatches";
 import NavBar from "./components/NavBar/NavBar";
-import SlideShow from "./components/SlideShow/SlideShow";
 import QuickLinks from "./components/QuickLinks/QuickLinks";
 import Footer from "./components/Footer/Footer";
 import MusicalInstruments from "./SitePages/MusicalInstruments/MusicalInstruments";
+import ProductCalculators from "./SitePages/Product-Calculators/ProductCalculators";
+import ProductLabelPrinters from "./SitePages/Product-LabelPrinters/ProductLabelPrinters";
+import ProductCashRegister from "./SitePages/Product-CashRegisters/ProductCashRegister";
+import ProductProjectors from "./SitePages/ProductProjectors/ProductProjectors";
+import ProductAccessories from "./SitePages/Product-Accessories/ProductAccessories";
 
 export const NavContext = createContext();
 
@@ -60,6 +64,21 @@ function App() {
         {/* <SlideShow /> */}
         {/* routes to pages */}
         <Switch>
+          <Route path="/products/accessories">
+            <ProductAccessories />
+          </Route>
+          <Route path="/products/projectors">
+            <ProductProjectors />
+          </Route>
+          <Route path="/products/cash-registers">
+            <ProductCashRegister />
+          </Route>
+          <Route path="/products/label-printers">
+            <ProductLabelPrinters />
+          </Route>
+          <Route path="/products/calculators">
+            <ProductCalculators />
+          </Route>
           <Route path="/products/watches">
             <ProductWatches />
           </Route>

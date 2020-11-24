@@ -1,0 +1,22 @@
+.productAccessories__body {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .productAccessories__body > .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .productAccessories__body .itemCard {
+    grid-column: span 4;
+  }
+
+  .productAccessories__body .itemCard:nth-child(1) {
+    grid-column: 1/7;
+  }
+
+  .productAccessories__body .itemCard:nth-child(2) {
+    grid-column: 7/13;
+  }
+}

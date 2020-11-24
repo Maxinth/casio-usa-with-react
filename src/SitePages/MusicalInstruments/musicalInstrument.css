@@ -11,37 +11,7 @@
   /* padding: 1rem 6rem; */
 }
 
-.piano {
-  padding: 1rem 2rem;
-  /* background-color: #fff; */
-}
-
-.piano__text {
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 0.5rem 1rem;
-  margin-left: 0;
-  padding: 0.4rem;
-  padding-bottom: 0.9rem;
-  width: 100%;
-  padding-left: 1rem;
-  border-bottom: 1px solid rgb(209, 204, 204);
-  text-transform: capitalize;
-}
-
-.piano__finalSection {
-  padding: 1rem 1rem;
-  font-weight: 300;
-  font-size: 1.2rem;
-  padding-bottom: 2rem;
-}
-.piano__img {
-  width: 100%;
-  object-fit: contain;
-}
-.piano__body {
-  background-color: #fff;
-}
+/* .musicalInstruments__body:hover */
 .container + .supportInfo > .supportInfo__container {
   padding: 2rem;
 }
@@ -53,26 +23,26 @@
     padding: 1rem 2rem;
   }
 
-  .piano {
+  .musicalInstruments__body .itemCard {
     grid-column: span 4;
     margin-left: -1.6rem;
     margin-right: -1.6rem;
   }
-  .piano:nth-child(1) {
+  .musicalInstruments__body .itemCard:nth-child(1) {
     grid-column: 1/7;
   }
 
-  .piano:nth-child(12) {
+  .musicalInstruments__body .itemCard:nth-child(12) {
     grid-column: span 6;
   }
-  .piano:nth-child(13) {
+  .musicalInstruments__body .itemCard:nth-child(13) {
     grid-column: span 6;
   }
-  .piano:nth-child(14) {
+  .musicalInstruments__body .itemCard:nth-child(14) {
     grid-column: 1/-1;
   }
 
-  .piano:nth-child(2) {
+  .musicalInstruments__body .itemCard:nth-child(2) {
     grid-column: 7/13;
   }
 }
