@@ -1,0 +1,25 @@
+.productArchive__body {
+  padding: 1rem 2rem;
+  background-color: var(--container-bg);
+}
+
+@media (min-width: 768px) {
+  .productArchive__body > .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 15px;
+    padding: 1rem 2rem;
+  }
+
+  .productArchive__body .productWatch {
+    grid-column: span 4;
+  }
+
+  .productArchive__body .productWatch:nth-child(1) {
+    grid-column: 1/7;
+  }
+
+  .productArchive__body .productWatch:nth-child(2) {
+    grid-column: 7/13;
+  }
+}

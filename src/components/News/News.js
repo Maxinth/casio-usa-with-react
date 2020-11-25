@@ -12,7 +12,7 @@ const News = ({ date, title }) => {
             <span className="newsRelease__timePiece">Timepiece</span>
           </h3>
           <p className="newsRelease__newsTitleMore">
-            {title}
+            <span className="newsRelease__titleText">{title}</span>
             <ArrowForwardIosRoundedIcon />
           </p>
         </section>

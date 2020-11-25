@@ -21,7 +21,7 @@ export default {
       "projectors",
       "accessories",
       "watches/pro-tek",
-      "archive",
+      "archive/watches",
     ],
   },
 

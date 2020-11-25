@@ -2,9 +2,21 @@
   margin: 10px 0;
   display: flex;
   align-items: center;
+  flex-direction: column;
   padding: 0 2rem;
+  font-family: "Lato", sans-serif;
 }
 
+.newProductHeader__new {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.newProductHeader__new.archive {
+  border-bottom: 1px solid rgb(228, 218, 218);
+  border-top: 1px solid rgb(228, 218, 218);
+}
 .newProductHeader__imgContainer {
   max-width: 190px;
   min-width: 5px;
@@ -20,6 +32,7 @@
   color: var(--casio-blue);
   margin-top: 0.3rem;
   text-transform: capitalize;
+  margin-left: 0.2rem;
 }
 .newProductHeader__title {
   color: rgb(16, 13, 13);
@@ -31,12 +44,46 @@
   font-weight: 700;
 }
 
+.newProductHeader__account {
+  margin-right: 4rem;
+}
+
+.newProductHeader__account,
+.newProductHeader__reg {
+  display: flex;
+  align-items: center;
+}
+
+.newProductHeader__account svg {
+  font-size: 1rem;
+  color: var(--casio-blue);
+  margin-left: 0.2rem;
+}
+.newProductHeader__account > svg {
+  font-size: 4.5rem;
+  margin-left: 0.9rem;
+  margin-right: 0.4rem;
+}
 @media (min-width: 768px) {
   .newProductHeader {
     margin: 2rem 0;
     justify-content: center;
+    flex-direction: row;
   }
 
+  .newProductHeader__account > svg {
+    font-size: 2.8rem;
+  }
+
+  .newProductHeader__reg {
+    margin-top: 1.5rem;
+    font-weight: 700;
+  }
+  .newProductHeader__new.archive {
+    border: unset;
+    border-right: 1px solid rgb(228, 218, 218);
+    padding-right: 1.2rem;
+  }
   .newProductHeader__title {
     font-size: 1.2rem;
     margin-top: 1rem;

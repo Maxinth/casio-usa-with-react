@@ -12,6 +12,7 @@ import ProductLabelPrinters from "./SitePages/Product-LabelPrinters/ProductLabel
 import ProductCashRegister from "./SitePages/Product-CashRegisters/ProductCashRegister";
 import ProductProjectors from "./SitePages/ProductProjectors/ProductProjectors";
 import ProductAccessories from "./SitePages/Product-Accessories/ProductAccessories";
+import ProductArchive from "./SitePages/Product-Archive/ProductArchive";
 
 export const NavContext = createContext();
 
@@ -64,6 +65,9 @@ function App() {
         {/* <SlideShow /> */}
         {/* routes to pages */}
         <Switch>
+          <Route path="/products/archive/watches">
+            <ProductArchive />
+          </Route>
           <Route path="/products/accessories">
             <ProductAccessories />
           </Route>

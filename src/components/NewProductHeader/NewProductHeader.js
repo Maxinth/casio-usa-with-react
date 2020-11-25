@@ -1,18 +1,38 @@
 import React from "react";
 import newImg from "../../assets/icon_new_blue.png";
 import "./newProductsHeader.css";
+import AccountCircleOutlinedIcon from "@material-ui/icons/AccountCircleOutlined";
+import LaunchIcon from "@material-ui/icons/Launch";
+import { useLocation } from "react-router-dom";
 const NewProductHeader = ({ itemType }) => {
+  const { pathname } = useLocation();
+  const isArchivePage = pathname === "/products/archive/watches";
+
   return (
     <section className="newProductHeader">
-      <div className="newProductHeader__imgContainer">
-        <img src={newImg} alt="new" className="newProductHeader__img" />
-      </div>
-      <h4 className="newProductHeader__title">
-        <span>New Products</span>
-        {itemType && (
-          <span className="newProductHeader__itemType">({itemType})</span>
-        )}
-      </h4>
+      <section
+        className={`newProductHeader__new ${isArchivePage ? "archive" : ""}`}
+      >
+        <div className="newProductHeader__imgContainer">
+          <img src={newImg} alt="new" className="newProductHeader__img" />
+        </div>
+        <h4 className="newProductHeader__title">
+          <div>
+            <span>New Products</span>
+            {itemType && (
+              <span className="newProductHeader__itemType">({itemType})</span>
+            )}
+          </div>
+        </h4>
+      </section>
+      {isArchivePage && (
+        <section className="newProductHeader__account">
+          <AccountCircleOutlinedIcon />
+          <span className="newProductHeader__reg">
+            Registration <LaunchIcon />
+          </span>
+        </section>
+      )}
     </section>
   );
 };
