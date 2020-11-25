@@ -3,12 +3,15 @@
   background-color: var(--container-bg);
 }
 
+.productArchive__body > .container {
+  /* padding: 0.8rem; */
+}
 @media (min-width: 768px) {
   .productArchive__body > .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 15px;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
   }
 
   .productArchive__body .productWatch {
@@ -21,5 +24,11 @@
 
   .productArchive__body .productWatch:nth-child(2) {
     grid-column: 7/13;
+  }
+}
+
+@media (min-width: 1300px) {
+  .productArchive__body > .container {
+    padding: 1rem 3rem;
   }
 }

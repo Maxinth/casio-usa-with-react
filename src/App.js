@@ -13,6 +13,7 @@ import ProductCashRegister from "./SitePages/Product-CashRegisters/ProductCashRe
 import ProductProjectors from "./SitePages/ProductProjectors/ProductProjectors";
 import ProductAccessories from "./SitePages/Product-Accessories/ProductAccessories";
 import ProductArchive from "./SitePages/Product-Archive/ProductArchive";
+import ProTrek from "./SitePages/ProTrek-Watches/ProTrek";
 
 export const NavContext = createContext();
 
@@ -65,6 +66,9 @@ function App() {
         {/* <SlideShow /> */}
         {/* routes to pages */}
         <Switch>
+          <Route path="/products/watches/pro-trek">
+            <ProTrek />
+          </Route>
           <Route path="/products/archive/watches">
             <ProductArchive />
           </Route>
@@ -83,7 +87,7 @@ function App() {
           <Route path="/products/calculators">
             <ProductCalculators />
           </Route>
-          <Route path="/products/watches">
+          <Route path="/products/watches" exact>
             <ProductWatches />
           </Route>
 

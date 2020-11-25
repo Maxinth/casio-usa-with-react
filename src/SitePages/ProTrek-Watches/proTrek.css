@@ -1,0 +1,49 @@
+section#proTrek .itemCard .itemCard__priceAndText {
+  padding: 1rem 1rem;
+  display: inline-block;
+  align-self: flex-start;
+}
+section#proTrek .itemCard .itemCard__text {
+  border-bottom: unset;
+  padding: unset;
+  padding-bottom: 0.2rem;
+  display: inline-block;
+}
+
+section#proTrek .itemCard .itemCard__finalSection {
+  border-top: 1px solid rgb(209, 204, 204);
+  font-size: 0.9rem;
+}
+
+section#proTrek .itemCard .itemCard__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section#proTrek .itemCard .itemCard__img {
+  max-width: 130px;
+  padding: 2rem 1rem 0.5rem 1rem;
+}
+
+@media (min-width: 768px) {
+  section#proTrek .proTrek__body > .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 1rem;
+  }
+}
+
+@media (min-width: 951px) {
+  section#proTrek .proTrek__body > .container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  section#proTrek .itemCard {
+    /* min-width: 300px; */
+  }
+}
+@media (min-width: 1200px) {
+  .proTrek .slideShow {
+    padding: 0.2rem 2rem;
+  }
+}

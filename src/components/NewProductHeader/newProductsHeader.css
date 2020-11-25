@@ -7,6 +7,10 @@
   font-family: "Lato", sans-serif;
 }
 
+.newProductHeader.hideHeader {
+  display: none;
+}
+
 .newProductHeader__new {
   margin-top: 0.5rem;
   display: flex;

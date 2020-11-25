@@ -19,9 +19,9 @@ export default [
   },
   {
     img: "../../../productsImages/panel_labelprinter_for_intl.png",
-    title: "label printer",
+    title: "label printers",
 
-    goTo: "/label-printer",
+    goTo: "/label-printers",
   },
   {
     img: "../../../productsImages/panel_register.png",
@@ -46,7 +46,7 @@ export default [
     img: "../../../productsImages/img_wsd01.png",
     title: "smart outdoor watch CA and US",
 
-    goTo: "/watches/pro-tek",
+    goTo: "/watches/pro-trek",
   },
   {
     img: "../../../productsImages/casio-archive.jpg",

@@ -20,7 +20,7 @@ export default {
       "cash-registers",
       "projectors",
       "accessories",
-      "watches/pro-tek",
+      "watches/pro-trek",
       "archive/watches",
     ],
   },

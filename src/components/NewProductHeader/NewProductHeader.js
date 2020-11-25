@@ -7,9 +7,11 @@ import { useLocation } from "react-router-dom";
 const NewProductHeader = ({ itemType }) => {
   const { pathname } = useLocation();
   const isArchivePage = pathname === "/products/archive/watches";
+  const isProTrekPage = pathname === "/products/watches/pro-trek";
+  const proTrekClass = isProTrekPage ? "hideHeader" : "";
 
   return (
-    <section className="newProductHeader">
+    <section className={`newProductHeader ${proTrekClass}`}>
       <section
         className={`newProductHeader__new ${isArchivePage ? "archive" : ""}`}
       >
@@ -25,6 +27,7 @@ const NewProductHeader = ({ itemType }) => {
           </div>
         </h4>
       </section>
+
       {isArchivePage && (
         <section className="newProductHeader__account">
           <AccountCircleOutlinedIcon />
