@@ -3,6 +3,7 @@ import RssFeedRoundedIcon from "@material-ui/icons/RssFeedRounded";
 import News from "./News";
 import "./newsReleases.css";
 import data from "./newsData";
+
 const NewsReleases = () => {
   return (
     <section className="newsRelease">
@@ -16,8 +17,8 @@ const NewsReleases = () => {
         </h4>
         <section className="newsReleases__news">
           <ul className="newsReleases__newsNav">
-            {data.map((item) => (
-              <News key={item.id} {...item} />
+            {data.map((item, index) => (
+              <News key={index} {...item} />
             ))}
           </ul>
         </section>

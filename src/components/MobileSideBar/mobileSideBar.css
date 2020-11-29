@@ -15,6 +15,36 @@
   font-family: "Lato", sans-serif;
 }
 
+.mobileSideBar__pageLink {
+  color: var(--casio-blue);
+  text-decoration: none;
+}
+
+.mobileSideBar__pageLink:hover {
+  text-decoration: underline;
+}
+.mobileSideBar__pageLink.product-registration,
+.mobileSideBar__pageLink.corp {
+  color: red;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  /* display: block; */
+}
+
+.mobileSideBar__pageLink.corp {
+  color: #fff;
+  justify-content: center;
+}
+
+.mobileSideBar__pageLink:hover + .mobileSideBar__icon,
+.mobileSideBar__pageLink:hover > .mobileSideBar__icon {
+  color: var(--casio-blue);
+  font-weight: bolder;
+}
+.mobileSideBar__pageLink.corp:hover {
+  text-decoration: none;
+}
 .mobileSideBar__searchBox {
   background-color: #fff;
   margin-top: 0.5rem;
@@ -102,6 +132,8 @@ svg.arrow {
 
 .mobileSideBar__moreDetails .hoverDetail h3 + .hoverDetail__nav {
   background-color: blue;
+  /* background-color: #fff; */
+  /* color: var(--casio-blue); */
   color: #fff;
 }
 

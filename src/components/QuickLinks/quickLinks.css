@@ -28,6 +28,9 @@
   list-style-type: none;
 }
 
+.quickList__link.news {
+  font-style: italic;
+}
 .quickList__link {
   color: #444;
   text-decoration: none;

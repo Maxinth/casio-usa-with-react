@@ -7,6 +7,7 @@ const NavSupportDetails = () => {
   const { whenNotInView } = useContext(NavContext);
   return (
     <section className="navSupportDetails" onMouseLeave={whenNotInView}>
+      {/* when user hovers in views its content via toggle and  HIDE ONLY WHEN THEY HOVER OUT */}
       <ul className="navSupportDetails__nav">
         <li className="navSupportDetails__listItem">
           <Link to="/support/watches">
@@ -56,3 +57,7 @@ const NavSupportDetails = () => {
 };
 
 export default NavSupportDetails;
+
+// hovering on the Support Link brings this component into view
+// when you enter into this components view and leave, product becomes false again and
+// this component again disappears - see the onMouseLeave handler

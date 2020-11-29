@@ -1,24 +1,20 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./slideShow.css";
-// import testImg from "../../assets/gshock-move-mobile.jpg";
-import NavProductDetails from "../NavBar/NavProductDetails/NavProductDetails";
-import { NavContext } from "../../App";
-import NavSupportDetails from "../NavBar/NavSupportDetails/NavSupportDetails";
-import NavMoreDetails from "../NavBar/NavMoreDetails/NavMoreDetails";
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
+import { slideImageVariant, variantProps } from "../variants/slideImageVariant";
 const SlideShow = ({ imgShown }) => {
-  // const [showDetails, setShowDetails] = useState(true)
-  const { product, more, support } = useContext(NavContext);
   const { pathname } = useLocation();
 
   return (
     <>
-      <section className="slideShow">
+      <motion.section
+        variants={slideImageVariant}
+        {...variantProps}
+        className="slideShow"
+      >
         <img src={imgShown} alt="test watch" />
-        {product && <NavProductDetails />}
-        {support && <NavSupportDetails />}
-        {more && <NavMoreDetails />}
-      </section>
+      </motion.section>
       {/* show only when the path matches the one specified below */}
       {pathname === "/products/watches/pro-trek" && (
         <section className="container">

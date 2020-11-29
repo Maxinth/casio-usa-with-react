@@ -15,6 +15,7 @@ const HoverDetail = ({ title, itemLinks = [] }) => {
         onClick={() => setShowDetails(!showDetails)}
       >
         {title}
+        {/* toggleIcon based on state */}
         {!showDetails ? <ExpandMoreRoundedIcon /> : <ExpandLessRoundedIcon />}
       </h3>
       {showDetails && (

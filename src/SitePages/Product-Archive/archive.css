@@ -1,5 +1,5 @@
 .productArchive__body {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   background-color: var(--container-bg);
 }
 
@@ -7,11 +7,14 @@
   /* padding: 0.8rem; */
 }
 @media (min-width: 768px) {
+  .productArchive__body {
+    padding: 1rem 3rem;
+  }
   .productArchive__body > .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 15px;
-    padding: 1rem 1rem;
+    /* padding: 1rem 1rem; */
   }
 
   .productArchive__body .productWatch {
@@ -27,8 +30,8 @@
   }
 }
 
-@media (min-width: 1300px) {
-  .productArchive__body > .container {
-    padding: 1rem 3rem;
+@media (min-width: 1200px) {
+  .productArchive__body {
+    padding: 1rem 5rem;
   }
 }

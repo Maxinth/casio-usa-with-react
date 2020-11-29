@@ -69,8 +69,18 @@
   /* text-align: center; */
 }
 
+.nav__navLinks.final {
+  display: none;
+}
+
 .nav__navLinks:hover {
   background-color: #eaf2ff;
+}
+
+.nav__navLinks.isActive {
+  background-color: var(--casio-blue);
+  color: #fff !important;
+  font-weight: bolder;
 }
 .nav__menu li {
   display: flex;
@@ -156,7 +166,7 @@
 }
 
 @media (min-width: 902px) {
-  .navLinks.final {
+  .nav__navLinks.final {
     display: block;
   }
 

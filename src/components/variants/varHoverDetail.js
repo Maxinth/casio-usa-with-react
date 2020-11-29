@@ -15,6 +15,16 @@ const hoverDetailVariant = {
 const variantProps = {
   initial: "hidden",
   animate: "visible",
+  hover: "hover",
 };
 
-export { hoverDetailVariant, variantProps };
+const productItemHoverVariant = {
+  hover: {
+    scale: 1.01,
+    transition: {
+      type: "tween",
+      yoyo: 10,
+    },
+  },
+};
+export { hoverDetailVariant, variantProps, productItemHoverVariant };

@@ -2,6 +2,9 @@
   padding: 1rem;
 }
 
+.productLabelPrinters__body .itemCard {
+  padding: 1rem 1rem;
+}
 @media (min-width: 768px) {
   .productLabelPrinters__body > .container {
     display: grid;
@@ -12,5 +15,6 @@
     /* padding */
     margin-bottom: 1rem;
     margin-top: 1rem;
+    padding: 1rem 2rem;
   }
 }

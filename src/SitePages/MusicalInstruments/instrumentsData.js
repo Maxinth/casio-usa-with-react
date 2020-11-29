@@ -78,3 +78,5 @@ export default [
     description: "",
   },
 ];
+
+// images are in the public folder which houses the directory containing them

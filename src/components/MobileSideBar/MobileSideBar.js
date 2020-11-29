@@ -8,6 +8,7 @@ import "./mobileSideBar.css";
 import { NavContext } from "../../App";
 import CloseIcon from "@material-ui/icons/Close";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   mobileSideBarVariant,
   variantProps,
@@ -16,6 +17,7 @@ import NavSupportDetails from "../NavBar/NavSupportDetails/NavSupportDetails";
 
 const MobileSideBar = () => {
   const { closeBar } = useContext(NavContext);
+  // state to toggle details on mobileSideBar
   const [sideDetail, setSideDetail] = useState({
     product: false,
     support: false,
@@ -34,6 +36,7 @@ const MobileSideBar = () => {
       className="mobileSideBar"
       variants={mobileSideBarVariant}
       {...variantProps}
+      onMouseLeave={closeBar} // hide/ close the sidebar when user moves out of it
     >
       <CloseIcon onClick={closeBar} className="mobileSideBar__closeIcon" />
       <section className="mobileSideBar__searchBox">
@@ -45,32 +48,63 @@ const MobileSideBar = () => {
       </section>
       <section className="mobileSideBar__moreDetails">
         <div className="mobileSideBar__options">
-          <span>Products</span>
+          <Link to="/products" className="mobileSideBar__pageLink">
+            Products
+          </Link>
+          {/* toggling the icon based on if the product details are in view */}
           {!sideDetail.product ? (
-            <AddRoundedIcon onClick={toggleProduct} />
+            <AddRoundedIcon
+              onClick={toggleProduct}
+              className="mobileSideBar__icon"
+            />
           ) : (
-            <RemoveRoundedIcon onClick={toggleProduct} />
+            <RemoveRoundedIcon
+              onClick={toggleProduct}
+              className="mobileSideBar__icon"
+            />
           )}
         </div>
+        {/* show if true */}
         {sideDetail.product && <NavProductDetails />}
         <div className="mobileSideBar__options">
-          <span>Support</span>{" "}
+          <Link to="/support" className="mobileSideBar__pageLink">
+            Support
+          </Link>
+          {/* toggling the icon based on if the support details are in view */}
           {!sideDetail.support ? (
-            <AddRoundedIcon onClick={toggleSupport} />
+            <AddRoundedIcon
+              onClick={toggleSupport}
+              className="mobileSideBar__icon"
+            />
           ) : (
-            <RemoveRoundedIcon onClick={toggleSupport} />
+            <RemoveRoundedIcon
+              onClick={toggleSupport}
+              className="mobileSideBar__icon"
+            />
           )}
         </div>
+        {/* show if true */}
         {sideDetail.support && <NavSupportDetails />}
         <div className="mobileSideBar__options">
-          <span>News</span> <ArrowForwardIosRoundedIcon className="arrow" />
+          <Link to="/news" className="mobileSideBar__pageLink">
+            News
+          </Link>
+          <ArrowForwardIosRoundedIcon className="mobileSideBar__icon arrow" />
         </div>
         <div className="mobileSideBar__options">
-          <span className="product-registration">Product Registration</span>
-          <ArrowForwardIosRoundedIcon className="arrow" />
+          <Link
+            to="/product-registration"
+            className="product-registration mobileSideBar__pageLink"
+          >
+            Product Registration
+          </Link>
+          <ArrowForwardIosRoundedIcon className="arrow mobileSideBar__icon" />
         </div>
         <div className="mobileSideBar__corporate">
-          <ArrowForwardIosRoundedIcon className="arrow" /> Corporate
+          <Link to="/corporate" className="mobileSideBar__pageLink corp">
+            Corporate{" "}
+            <ArrowForwardIosRoundedIcon className="arrow mobileSideBar__icon" />
+          </Link>
         </div>
       </section>
     </motion.section>

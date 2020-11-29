@@ -6,6 +6,7 @@
   .productAccessories__body > .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    padding: 1rem 1rem;
   }
 
   .productAccessories__body .itemCard {
@@ -18,5 +19,11 @@
 
   .productAccessories__body .itemCard:nth-child(2) {
     grid-column: 7/13;
+  }
+}
+
+@media (min-width: 1200px) {
+  .productAccessories__body > .container {
+    padding: 1rem 2rem;
   }
 }

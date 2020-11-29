@@ -8,6 +8,8 @@ const QuickList = ({ items, title, path }) => {
       : title === "support"
       ? "support"
       : "corporate";
+
+  const newsClass = items.length === 1 ? "news" : "";
   return (
     <section className="quickList">
       <Link to={`/${title}`} className="quickList__title">
@@ -17,8 +19,13 @@ const QuickList = ({ items, title, path }) => {
         {items.map((item, index) => (
           <li key={item} className="quickList__listItem">
             <Link
-              to={`/${linkPath}/${path[index]}`}
-              className="quickList__link"
+              to={
+                title === "news"
+                  ? `/${linkPath}`
+                  : `/${linkPath}/${path[index]}`
+              }
+              // to={`/${linkPath}/${path[index]}`}
+              className={`quickList__link ${newsClass}`}
             >
               {item}
             </Link>

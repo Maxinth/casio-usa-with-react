@@ -6,10 +6,16 @@
   .productProjectors__body > .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* gap: 0 0.5rem; */
+    padding: 1rem 1rem;
   }
 
   .productProjectors__body .itemCard:nth-child(7) {
     grid-column: 1/-1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .productProjectors__body > .container {
+    padding: 1rem 2rem;
   }
 }

@@ -14,16 +14,22 @@ import ProductProjectors from "./SitePages/ProductProjectors/ProductProjectors";
 import ProductAccessories from "./SitePages/Product-Accessories/ProductAccessories";
 import ProductArchive from "./SitePages/Product-Archive/ProductArchive";
 import ProTrek from "./SitePages/ProTrek-Watches/ProTrek";
+import ProductsIndex from "./SitePages/Products-Index/ProductsIndex";
+import NewsIndex from "./SitePages/NewsIndex.js/NewsIndex";
+import SupportIndex from "./SitePages/Support-Index/SupportIndex";
+import Corporate from "./SitePages/Corporate/Corporate";
 
 export const NavContext = createContext();
 
 function App() {
+  //state for mobileSideBar
   const [bar, setBar] = useState(false);
   const toggleBar = () => setBar((bar) => !bar);
 
   const closeBar = () => setBar(false);
 
-  // state for nav items
+  // state for nav items to control when the "more details components (NavMoreDetails NavSupportDetails"
+  // and NavProductDetails come into view
   const [navItems, setNavItems] = useState({
     product: false,
     support: false,
@@ -32,6 +38,7 @@ function App() {
   });
 
   const whenHovered = (e) => {
+    // hide the rest and show only the one being hovered on
     return setNavItems({
       product: false,
       support: false,
@@ -42,6 +49,7 @@ function App() {
   };
 
   const whenNotInView = (e) => {
+    // when none  is being hovered on, hide all details
     return setNavItems({
       product: false,
       support: false,
@@ -63,9 +71,21 @@ function App() {
         }}
       >
         <NavBar />
-        {/* <SlideShow /> */}
+
         {/* routes to pages */}
         <Switch>
+          <Route path="/corporate" exact>
+            <Corporate />
+          </Route>
+          <Route path={["/support", "/product-registration", "/wsd/en/device"]}>
+            <SupportIndex />
+          </Route>
+          <Route path="/news">
+            <NewsIndex />
+          </Route>
+          <Route path="/products" exact>
+            <ProductsIndex />
+          </Route>
           <Route path="/products/watches/pro-trek">
             <ProTrek />
           </Route>

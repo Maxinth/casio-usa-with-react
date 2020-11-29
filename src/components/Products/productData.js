@@ -57,4 +57,8 @@ export default [
 ];
 
 /* when writing the relative path to the images, I have omitted the public folder which 
- contains the productsImage directory housing the images */
+ contains the productsImage directory housing the images 
+ 
+ This images have been put in the public folder because I need to map over some items and slot them in dynamically
+ 
+ */

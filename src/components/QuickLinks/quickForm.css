@@ -1,5 +1,6 @@
 .quickForm {
   font-family: "Lato", sans-serif;
+  margin-right: 1rem;
 }
 .quickForm__searchBox {
   background-color: #fff;

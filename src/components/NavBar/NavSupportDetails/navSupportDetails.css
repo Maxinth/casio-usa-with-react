@@ -1,10 +1,13 @@
 .navSupportDetails {
   width: 360px;
   position: absolute;
-  top: 0;
+  top: 82px;
   left: calc(100vw - 409px);
   /* border-left: 1px solid black; */
   display: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: 101;
 }
 
 .navSupportDetails__nav {

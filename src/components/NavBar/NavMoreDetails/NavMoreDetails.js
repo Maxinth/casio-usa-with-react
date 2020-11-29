@@ -8,7 +8,7 @@ const NavMoreDetails = () => {
   return (
     <section className="navMoreDetails" onMouseLeave={whenNotInView}>
       <div className="navMoreDetails__productRegistration">
-        Product Registration
+        <Link to="/product-registration">Product Registration</Link>
       </div>
       <div className="navMoreDetails__corporate">
         <Link to="/corporate">
@@ -20,3 +20,7 @@ const NavMoreDetails = () => {
 };
 
 export default NavMoreDetails;
+
+// hovering on the more Link brings this component into view
+// when you enter into this components view and leave, product becomes false again and
+// this component again disappears - see the onMouseLeave handler

@@ -16,9 +16,19 @@
   text-transform: capitalize;
 }
 
+.itemCard__launchIcon {
+  margin-right: 1rem;
+  font-size: 0.9rem;
+  color: var(--casio-blue);
+  margin-bottom: 0.5rem;
+}
+.itemCard__textAndShowLink {
+  display: flex;
+  align-items: center;
+}
 .itemCard__finalSection {
   padding: 1rem 1rem;
-  font-weight: 300;
+  font-weight: 300; /* get font-weight of 400 */
   font-size: 1.2rem;
   padding-bottom: 2rem;
 }
@@ -32,4 +42,10 @@
 
 .itemCard:hover .itemCard__img {
   opacity: 0.7;
+}
+
+@media (min-width: 990px) {
+  .itemCard__launchIcon {
+    font-size: 1.1rem !important;
+  }
 }

@@ -1,0 +1,34 @@
+.supportIndex {
+  font-family: "Lato", sans-serif;
+}
+
+.supportIndex__more {
+  margin-bottom: 1.3rem;
+}
+.supportIndex__details {
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.supportIndex__details .products {
+  padding: unset;
+  /* font-size: 0.8rem; */
+}
+.supportIndex__details .products .products__listItem:nth-child(9) {
+  display: none;
+}
+
+@media (max-width: 350px) {
+  .supportIndex__details .products .products__linkTitle {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .supportIndex__details {
+    padding: 1rem 3rem;
+  }
+}

@@ -6,6 +6,7 @@ const NavProductDetails = () => {
   const { whenNotInView } = useContext(NavContext);
   return (
     <section className="navProductDetails" onMouseLeave={whenNotInView}>
+      {/* when user hovers in views its content via toggle and  HIDE ONLY WHEN THEY HOVER OUT */}
       <HoverDetail
         title="Watches"
         itemLinks={[

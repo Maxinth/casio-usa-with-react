@@ -1,10 +1,14 @@
 .navProductDetails {
   position: absolute;
   /* top: -15px; */
-  top: 0;
+  top: 82px;
   left: calc(100vw - 100px - 1%);
   /* border-left: 1px solid black; */
   display: none;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-bottom: 1rem;
+  z-index: 101;
 }
 
 @media (min-width: 768px) {

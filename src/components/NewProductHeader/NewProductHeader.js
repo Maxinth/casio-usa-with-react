@@ -11,6 +11,7 @@ const NewProductHeader = ({ itemType }) => {
   const proTrekClass = isProTrekPage ? "hideHeader" : "";
 
   return (
+    // all OTHER pages get to display this section
     <section className={`newProductHeader ${proTrekClass}`}>
       <section
         className={`newProductHeader__new ${isArchivePage ? "archive" : ""}`}
@@ -28,6 +29,7 @@ const NewProductHeader = ({ itemType }) => {
         </h4>
       </section>
 
+      {/* embedding a second section which only gets shown when  pathname === "/products/archive/watches" */}
       {isArchivePage && (
         <section className="newProductHeader__account">
           <AccountCircleOutlinedIcon />

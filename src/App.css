@@ -18,3 +18,8 @@
 .sitePage__content {
   background-color: var(--container-bg);
 }
+
+.App {
+  position: relative;
+  font-family: "Lato", sans-serif;
+}

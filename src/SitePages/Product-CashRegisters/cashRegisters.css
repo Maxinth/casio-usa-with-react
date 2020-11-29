@@ -6,5 +6,12 @@
   .productCashRegister > .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .productCashRegister > .container {
+    padding: 1rem 2rem;
   }
 }

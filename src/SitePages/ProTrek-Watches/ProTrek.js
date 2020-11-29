@@ -4,7 +4,10 @@ import proTrekBanner from "../../assets/protrek-tpd.jpg";
 import "./proTrek.css";
 import data from "./proTrekData";
 import ItemCard from "../ItemCard-PageComponent/ItemCard";
+import useDocumentTitle from "../../components/UseTitle";
+
 const ProTrek = () => {
+  useDocumentTitle("Pro Trek");
   return (
     <section id="proTrek">
       <SharedLayout imgShown={proTrekBanner} pageTitle="pro trek">
