@@ -15,7 +15,7 @@ import ProductAccessories from "./SitePages/Product-Accessories/ProductAccessori
 import ProductArchive from "./SitePages/Product-Archive/ProductArchive";
 import ProTrek from "./SitePages/ProTrek-Watches/ProTrek";
 import ProductsIndex from "./SitePages/Products-Index/ProductsIndex";
-import NewsIndex from "./SitePages/NewsIndex.js/NewsIndex";
+import NewsIndex from "./SitePages/NewsIndex/NewsIndex";
 import SupportIndex from "./SitePages/Support-Index/SupportIndex";
 import Corporate from "./SitePages/Corporate/Corporate";
 
