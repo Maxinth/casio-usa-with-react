@@ -4,6 +4,8 @@
   /* display: flex; */
   /* position: relative; */
   /* relative to the slideShow which has been positioned absolute */
+  display: grid;
+  place-items: center;
 }
 
 .slideShow + .container {
@@ -12,7 +14,7 @@
 .proTrek__text {
   font-family: "Lato", sans-serif;
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.125rem;
   color: rgb(16, 13, 13);
   width: 100%;
@@ -21,7 +23,7 @@
 .slideShow img {
   width: 100%;
   object-fit: contain;
-  /* max-width: 1200px; */
+  max-width: 1400px;
   display: block;
   /* height: 100%; */
 }
@@ -41,5 +43,6 @@ section.smart {
 @media (min-width: 1200px) {
   .proTrek__text {
     text-align: justify;
+    font-weight: 400;
   }
 }

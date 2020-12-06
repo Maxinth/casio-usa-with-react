@@ -1,12 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
 import "./navMoreDetails.css";
 import { Link } from "react-router-dom";
-import { NavContext } from "../../../App";
+import { useGlobalContext } from "../../Context";
 const NavMoreDetails = () => {
-  const { whenNotInView } = useContext(NavContext);
+  const { whenNotInView, more, leftOffset } = useGlobalContext();
   return (
-    <section className="navMoreDetails" onMouseLeave={whenNotInView}>
+    <section
+      className={`navMoreDetails ${more ? "inView" : ""}`}
+      onMouseLeave={whenNotInView}
+      style={{ left: `${leftOffset - 137}px` }}
+    >
       <div className="navMoreDetails__productRegistration">
         <Link to="/product-registration">Product Registration</Link>
       </div>

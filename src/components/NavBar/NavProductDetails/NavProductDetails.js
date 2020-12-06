@@ -1,11 +1,17 @@
-import React, { useContext } from "react";
+import React from "react";
 import HoverDetail from "../HoverDetail";
 import "./navProductDetails.css";
-import { NavContext } from "../../../App";
+import { useGlobalContext } from "../../Context";
 const NavProductDetails = () => {
-  const { whenNotInView } = useContext(NavContext);
+  const { whenNotInView, leftOffset, product } = useGlobalContext();
+
   return (
-    <section className="navProductDetails" onMouseLeave={whenNotInView}>
+    <section
+      className={`navProductDetails ${product ? "inView" : ""}`}
+      onMouseLeave={whenNotInView}
+      style={{ left: `${leftOffset}px` }}
+      // on
+    >
       {/* when user hovers in views its content via toggle and  HIDE ONLY WHEN THEY HOVER OUT */}
       <HoverDetail
         title="Watches"

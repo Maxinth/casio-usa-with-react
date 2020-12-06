@@ -1,12 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./navSupportDetails.css";
 import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
-import { NavContext } from "../../../App";
+import { useGlobalContext } from "../../Context";
 const NavSupportDetails = () => {
-  const { whenNotInView } = useContext(NavContext);
+  const { whenNotInView, leftOffset, support } = useGlobalContext();
   return (
-    <section className="navSupportDetails" onMouseLeave={whenNotInView}>
+    <section
+      className={`navSupportDetails ${support ? "inView" : ""}`}
+      onMouseLeave={whenNotInView}
+      style={{ left: `${leftOffset}px` }}
+    >
       {/* when user hovers in views its content via toggle and  HIDE ONLY WHEN THEY HOVER OUT */}
       <ul className="navSupportDetails__nav">
         <li className="navSupportDetails__listItem">

@@ -26,7 +26,9 @@ const HoverDetail = ({ title, itemLinks = [] }) => {
         >
           {itemLinks.map((item) => (
             <li key={item}>
-              <Link className="hoverDetail__navLinks">{item}</Link>
+              <Link to="/" className="hoverDetail__navLinks">
+                {item}
+              </Link>
             </li>
           ))}
         </motion.ul>

@@ -1,10 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import { Link, useLocation, NavLink } from "react-router-dom";
 
-import { NavContext } from "../../App";
+import { useGlobalContext } from "../Context";
 import MobileSideBar from "../MobileSideBar/MobileSideBar";
 import NavSearchForm from "./NavSearchForm/NavSearchForm";
 import NavProductDetails from "./NavProductDetails/NavProductDetails";
@@ -14,7 +14,15 @@ import NavSupportDetails from "./NavSupportDetails/NavSupportDetails";
 const NavBar = () => {
   const { pathname } = useLocation();
 
-  const { whenHovered, whenNotInView, toggleBar, bar } = useContext(NavContext);
+  const {
+    whenHovered,
+    whenNotInView,
+    toggleBar,
+    bar,
+    product,
+    more,
+    support,
+  } = useGlobalContext();
 
   const [toggleSearchBox, setToggleSearchBox] = useState(false);
 
@@ -24,8 +32,6 @@ const NavBar = () => {
 
   const isThePathCurrently = (currentPath) =>
     pathname === currentPath ? "isActive" : "";
-
-  const { product, more, support } = useContext(NavContext);
 
   return (
     <>

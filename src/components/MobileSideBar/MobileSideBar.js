@@ -1,11 +1,11 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import RemoveRoundedIcon from "@material-ui/icons/RemoveRounded";
 import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import NavProductDetails from "../NavBar/NavProductDetails/NavProductDetails";
 import "./mobileSideBar.css";
-import { NavContext } from "../../App";
+import { useGlobalContext } from "../Context";
 import CloseIcon from "@material-ui/icons/Close";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ import {
 import NavSupportDetails from "../NavBar/NavSupportDetails/NavSupportDetails";
 
 const MobileSideBar = () => {
-  const { closeBar } = useContext(NavContext);
+  const { closeBar, bar } = useGlobalContext();
   // state to toggle details on mobileSideBar
   const [sideDetail, setSideDetail] = useState({
     product: false,
@@ -33,10 +33,12 @@ const MobileSideBar = () => {
   //   console.log("sidebar = ", sideBar);
   return (
     <motion.section
-      className="mobileSideBar"
+      className={`mobileSideBar ${bar ? "inView" : "hidden"}`}
       variants={mobileSideBarVariant}
       {...variantProps}
-      onMouseLeave={closeBar} // hide/ close the sidebar when user moves out of it
+
+      // hide/ close the sidebar when user moves out of it
+      // onMouseLeave={closeBar}
     >
       <CloseIcon onClick={closeBar} className="mobileSideBar__closeIcon" />
       <section className="mobileSideBar__searchBox">

@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React from "react";
 import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import Home from "./SitePages/Home/Home";
@@ -18,110 +18,106 @@ import ProductsIndex from "./SitePages/Products-Index/ProductsIndex";
 import NewsIndex from "./SitePages/NewsIndex/NewsIndex";
 import SupportIndex from "./SitePages/Support-Index/SupportIndex";
 import Corporate from "./SitePages/Corporate/Corporate";
-
-export const NavContext = createContext();
+// import
 
 function App() {
-  //state for mobileSideBar
-  const [bar, setBar] = useState(false);
-  const toggleBar = () => setBar((bar) => !bar);
+  // //state for mobileSideBar
+  // const [bar, setBar] = useState(false);
+  // const toggleBar = () => setBar((bar) => !bar);
 
-  const closeBar = () => setBar(false);
+  // const closeBar = () => setBar(false);
 
-  // state for nav items to control when the "more details components (NavMoreDetails NavSupportDetails"
-  // and NavProductDetails come into view
-  const [navItems, setNavItems] = useState({
-    product: false,
-    support: false,
-    more: false,
-    search: false,
-  });
+  // // state for nav items to control when the "more details components (NavMoreDetails NavSupportDetails"
+  // // and NavProductDetails come into view
+  // const [navItems, setNavItems] = useState({
+  //   product: false,
+  //   support: false,
+  //   more: false,
+  //   search: false,
+  //   leftOffset: 0, // which changes based on if the target is the product or support links
+  //   // moreLinkRightOffset: 0,
+  // });
 
-  const whenHovered = (e) => {
-    // hide the rest and show only the one being hovered on
-    return setNavItems({
-      product: false,
-      support: false,
-      more: false,
-      search: false,
-      [e.target.id]: true,
-    });
-  };
+  // const whenHovered = (e) => {
+  //   // get coordinate info of the target element
+  //   let temp = e.target.getBoundingClientRect();
+  //   //   get its left offset
+  //   const { left } = temp;
 
-  const whenNotInView = (e) => {
-    // when none  is being hovered on, hide all details
-    return setNavItems({
-      product: false,
-      support: false,
-      more: false,
-      search: false,
-    });
-  };
+  //   setNavItems({
+  //     leftOffset: parseInt(left),
+  //     // moreLinkRightOffset: parseInt(right),
+  //     product: false,
+  //     support: false,
+  //     more: false,
+  //     search: false,
+  //     [e.target.id]: true,
+  //   });
+  // };
+
+  // const whenNotInView = (e) => {
+  //   // when none  is being hovered on, hide all details
+  //   return setNavItems({
+  //     product: false,
+  //     support: false,
+  //     more: false,
+  //     search: false,
+  //   });
+  // };
 
   return (
     <div className="App">
-      <NavContext.Provider
-        value={{
-          ...navItems,
-          whenHovered,
-          whenNotInView,
-          bar,
-          toggleBar,
-          closeBar,
-        }}
-      >
-        <NavBar />
+      <NavBar />
 
-        {/* routes to pages */}
-        <Switch>
-          <Route path="/corporate" exact>
-            <Corporate />
-          </Route>
-          <Route path={["/support", "/product-registration", "/wsd/en/device"]}>
-            <SupportIndex />
-          </Route>
-          <Route path="/news">
-            <NewsIndex />
-          </Route>
-          <Route path="/products" exact>
-            <ProductsIndex />
-          </Route>
-          <Route path="/products/watches/pro-trek">
-            <ProTrek />
-          </Route>
-          <Route path="/products/archive/watches">
-            <ProductArchive />
-          </Route>
-          <Route path="/products/accessories">
-            <ProductAccessories />
-          </Route>
-          <Route path="/products/projectors">
-            <ProductProjectors />
-          </Route>
-          <Route path="/products/cash-registers">
-            <ProductCashRegister />
-          </Route>
-          <Route path="/products/label-printers">
-            <ProductLabelPrinters />
-          </Route>
-          <Route path="/products/calculators">
-            <ProductCalculators />
-          </Route>
-          <Route path="/products/watches" exact>
-            <ProductWatches />
-          </Route>
+      {/* routes to pages */}
+      <Switch>
+        <Route path="/corporate" exact>
+          <Corporate />
+        </Route>
+        <Route path={["/support", "/product-registration", "/wsd/en/device"]}>
+          <SupportIndex />
+        </Route>
+        <Route path="/news">
+          <NewsIndex />
+        </Route>
+        <Route path="/products" exact>
+          <ProductsIndex />
+        </Route>
+        <Route path="/products/watches/pro-trek">
+          <ProTrek />
+        </Route>
+        <Route path="/products/archive/watches">
+          <ProductArchive />
+        </Route>
+        <Route path="/products/accessories">
+          <ProductAccessories />
+        </Route>
+        <Route path="/products/projectors">
+          <ProductProjectors />
+        </Route>
+        <Route path="/products/cash-registers">
+          <ProductCashRegister />
+        </Route>
+        <Route path="/products/label-printers">
+          <ProductLabelPrinters />
+        </Route>
+        <Route path="/products/calculators">
+          <ProductCalculators />
+        </Route>
+        <Route path="/products/watches" exact>
+          <ProductWatches />
+        </Route>
 
-          <Route path="/products/electronic-musical-instruments">
-            <MusicalInstruments />
-          </Route>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-        </Switch>
-        {/* end of route to pages */}
-        <QuickLinks />
-        <Footer />
-      </NavContext.Provider>
+        <Route path="/products/electronic-musical-instruments">
+          <MusicalInstruments />
+        </Route>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+      </Switch>
+      {/* end of route to pages */}
+      <QuickLinks />
+      <Footer />
     </div>
   );
 }

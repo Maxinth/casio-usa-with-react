@@ -3,6 +3,7 @@ import "./slideShow.css";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { slideImageVariant, variantProps } from "../variants/slideImageVariant";
+
 const SlideShow = ({ imgShown }) => {
   const { pathname } = useLocation();
 

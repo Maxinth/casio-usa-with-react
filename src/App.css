@@ -7,6 +7,7 @@
 :root {
   --casio-blue: rgb(0, 50, 150);
   --container-bg: rgb(245, 245, 245);
+  --transition: all 0.3s linear;
 }
 
 .container {
@@ -22,4 +23,5 @@
 .App {
   position: relative;
   font-family: "Lato", sans-serif;
+  overflow: hidden;
 }

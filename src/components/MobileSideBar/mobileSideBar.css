@@ -119,6 +119,7 @@ svg.arrow {
   position: unset;
   width: 100%;
   display: block;
+  opacity: unset;
 }
 
 .mobileSideBar__moreDetails > .navProductDetails > .hoverDetail {
@@ -153,6 +154,7 @@ svg.arrow {
   /* border-left: 1px solid transparent; */
   width: 320px;
   display: block;
+  opacity: unset;
 }
 
 .mobileSideBar__moreDetails > .navSupportDetails > .navSupportDetails__nav {
