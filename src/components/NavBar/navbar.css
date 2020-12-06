@@ -41,9 +41,15 @@
   color: rgb(0, 50, 150);
   font-size: 2rem !important;
 }
-.nav__logo em::before {
+.nav__logo > img::after {
   content: " | ";
+  font-size: 2rem;
+  color: var(--casio-blue);
 }
+
+/* .nav__logo em::before {
+  content: " ";
+} */
 
 .nav__menu {
   list-style-type: none;
