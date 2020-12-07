@@ -16,7 +16,8 @@ import {
 import NavSupportDetails from "../NavBar/NavSupportDetails/NavSupportDetails";
 
 const MobileSideBar = () => {
-  const { closeBar, bar } = useGlobalContext();
+  const { closeBar } = useGlobalContext();
+
   // state to toggle details on mobileSideBar
   const [sideDetail, setSideDetail] = useState({
     product: false,
@@ -31,12 +32,12 @@ const MobileSideBar = () => {
   };
 
   //   console.log("sidebar = ", sideBar);
+
   return (
     <motion.section
-      className={`mobileSideBar ${bar ? "inView" : "hidden"}`}
+      className="mobileSideBar"
       variants={mobileSideBarVariant}
       {...variantProps}
-
       // hide/ close the sidebar when user moves out of it
       // onMouseLeave={closeBar}
     >

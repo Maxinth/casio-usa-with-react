@@ -41,15 +41,24 @@
   color: rgb(0, 50, 150);
   font-size: 2rem !important;
 }
-.nav__logo > img::after {
-  content: " | ";
-  font-size: 2rem;
+.nav__logo > em::before {
+  content: "| ";
+  font-size: 1.2rem;
   color: var(--casio-blue);
+
+  margin-right: 0.2rem;
+  font-weight: normal;
+  /* display: inline; */
 }
 
-/* .nav__logo em::before {
-  content: " ";
-} */
+.nav__logo em {
+  /* padding-top: 0.4rem; */
+  /* padding-left: 0.2rem; */
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
 
 .nav__menu {
   list-style-type: none;
