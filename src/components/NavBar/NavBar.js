@@ -139,12 +139,7 @@ const NavBar = () => {
         </div>
       </nav>
 
-      {/* show sidebar when the bar is clicked - 
-      
-      .mobileSideBar is set at position:  fixed and 
-        positioned using the position properties as defined in .mobileSidebar in its css file a
-      */}
-      {bar && <MobileSideBar />}
+      <MobileSideBar />
 
       {/* 
       I have moved this section here so it is visible on ALL PAGES when the test conditions are true 
