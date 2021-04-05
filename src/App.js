@@ -18,102 +18,40 @@ import ProductsIndex from "./SitePages/Products-Index/ProductsIndex";
 import NewsIndex from "./SitePages/NewsIndex/NewsIndex";
 import SupportIndex from "./SitePages/Support-Index/SupportIndex";
 import Corporate from "./SitePages/Corporate/Corporate";
-// import
 
 function App() {
-  // //state for mobileSideBar
-  // const [bar, setBar] = useState(false);
-  // const toggleBar = () => setBar((bar) => !bar);
-
-  // const closeBar = () => setBar(false);
-
-  // // state for nav items to control when the "more details components (NavMoreDetails NavSupportDetails"
-  // // and NavProductDetails come into view
-  // const [navItems, setNavItems] = useState({
-  //   product: false,
-  //   support: false,
-  //   more: false,
-  //   search: false,
-  //   leftOffset: 0, // which changes based on if the target is the product or support links
-  //   // moreLinkRightOffset: 0,
-  // });
-
-  // const whenHovered = (e) => {
-  //   // get coordinate info of the target element
-  //   let temp = e.target.getBoundingClientRect();
-  //   //   get its left offset
-  //   const { left } = temp;
-
-  //   setNavItems({
-  //     leftOffset: parseInt(left),
-  //     // moreLinkRightOffset: parseInt(right),
-  //     product: false,
-  //     support: false,
-  //     more: false,
-  //     search: false,
-  //     [e.target.id]: true,
-  //   });
-  // };
-
-  // const whenNotInView = (e) => {
-  //   // when none  is being hovered on, hide all details
-  //   return setNavItems({
-  //     product: false,
-  //     support: false,
-  //     more: false,
-  //     search: false,
-  //   });
-  // };
-
   return (
     <div className="App">
       <NavBar />
 
       {/* routes to pages */}
       <Switch>
-        <Route path="/corporate" exact>
-          <Corporate />
-        </Route>
-        <Route path={["/support", "/product-registration", "/wsd/en/device"]}>
-          <SupportIndex />
-        </Route>
-        <Route path="/news">
-          <NewsIndex />
-        </Route>
-        <Route path="/products" exact>
-          <ProductsIndex />
-        </Route>
-        <Route path="/products/watches/pro-trek">
-          <ProTrek />
-        </Route>
-        <Route path="/products/archive/watches">
-          <ProductArchive />
-        </Route>
-        <Route path="/products/accessories">
-          <ProductAccessories />
-        </Route>
-        <Route path="/products/projectors">
-          <ProductProjectors />
-        </Route>
-        <Route path="/products/cash-registers">
-          <ProductCashRegister />
-        </Route>
-        <Route path="/products/label-printers">
-          <ProductLabelPrinters />
-        </Route>
-        <Route path="/products/calculators">
-          <ProductCalculators />
-        </Route>
-        <Route path="/products/watches" exact>
-          <ProductWatches />
-        </Route>
-
-        <Route path="/products/electronic-musical-instruments">
-          <MusicalInstruments />
-        </Route>
-        <Route path="/" exact>
-          <Home />
-        </Route>
+        <Route path="/corporate" exact component={Corporate} />
+        <Route
+          path={["/support", "/product-registration", "/wsd/en/device"]}
+          component={SupportIndex}
+        />
+        <Route path="/news" component={NewsIndex} />
+        <Route path="/products" exact component={ProductsIndex} />
+        <Route path="/products/watches/pro-trek" component={ProTrek} />
+        <Route path="/products/archive/watches" component={ProductArchive} />
+        <Route path="/products/accessories" component={ProductAccessories} />
+        <Route path="/products/projectors" component={ProductProjectors} />
+        <Route
+          path="/products/cash-registers"
+          component={ProductCashRegister}
+        />
+        <Route
+          path="/products/label-printers"
+          component={ProductLabelPrinters}
+        />
+        <Route path="/products/calculators" component={ProductCalculators} />
+        <Route path="/products/watches" exact component={ProductWatches} />
+        <Route
+          path="/products/electronic-musical-instruments"
+          component={MusicalInstruments}
+        />
+        <Route path="/" exact component={Home} />
       </Switch>
       {/* end of route to pages */}
       <QuickLinks />
