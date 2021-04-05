@@ -1,31 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import RemoveRoundedIcon from "@material-ui/icons/RemoveRounded";
 import ArrowForwardIosRoundedIcon from "@material-ui/icons/ArrowForwardIosRounded";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import NavProductDetails from "../NavBar/NavProductDetails/NavProductDetails";
 import "./mobileSideBar.css";
-import { useGlobalContext } from "../Context";
 import CloseIcon from "@material-ui/icons/Close";
 import { Link } from "react-router-dom";
 import NavSupportDetails from "../NavBar/NavSupportDetails/NavSupportDetails";
+import useSideBar from "./useSideBar";
 
 const MobileSideBar = () => {
-  const { closeBar, bar, toggleBar } = useGlobalContext();
-
-  const barClass = bar ? "open" : "close";
-  // state to toggle details on mobileSideBar
-  const [sideDetail, setSideDetail] = useState({
-    product: false,
-    support: false,
-  });
-  const toggleProduct = () => {
-    setSideDetail({ ...sideDetail, product: !sideDetail.product });
-  };
-
-  const toggleSupport = () => {
-    setSideDetail({ ...sideDetail, support: !sideDetail.support });
-  };
+  const {
+    toggleBar,
+    barClass,
+    toggleProduct,
+    toggleSupport,
+    closeBar,
+    sideDetail,
+  } = useSideBar();
 
   return (
     <section className={`mobileSideBar ${barClass}`}>

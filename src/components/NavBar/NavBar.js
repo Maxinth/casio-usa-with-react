@@ -18,7 +18,6 @@ const NavBar = () => {
     whenHovered,
     whenNotInView,
     toggleBar,
-    bar,
     product,
     more,
     support,
